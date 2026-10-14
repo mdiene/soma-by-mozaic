@@ -11,6 +11,11 @@ for f in supabase/migrations/*.sql; do
   echo "-> $f"
   psql "$@" -d "$DB" -v ON_ERROR_STOP=1 -q -f "$f"
 done
+for f in supabase/seed/00_*.sql supabase/seed/90_*.sql; do
+  [ -f "$f" ] || continue
+  echo "-> $f"
+  psql "$@" -d "$DB" -v ON_ERROR_STOP=1 -q -f "$f" >/dev/null
+done
 if [ -f supabase/tests/smoke.sql ]; then
   echo "-> supabase/tests/smoke.sql"
   psql "$@" -d "$DB" -v ON_ERROR_STOP=1 -q -f supabase/tests/smoke.sql

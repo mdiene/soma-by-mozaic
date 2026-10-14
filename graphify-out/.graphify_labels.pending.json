@@ -1,6 +1,6 @@
 {
-  "0": "Utilisateurs.tsx",
-  "1": "Conformite.tsx",
+  "0": "Conformite.tsx",
+  "1": "2. Core Modules & Features",
   "2": "App.tsx",
   "3": "compilerOptions",
   "4": "Changelog",
@@ -12,13 +12,13 @@
   "10": "compilerOptions",
   "11": "Writing Guidelines for Postgres References",
   "12": "dependencies",
-  "13": "devDependencies",
+  "13": "Communities (14 total, 2 thin omitted)",
   "14": "scripts",
   "15": "Section Definitions",
   "16": "SOMA by Groupe Mozaïc — consignes du projet",
   "17": "Supabase Postgres Best Practices",
   "18": ".oxlintrc.json",
-  "19": "vite.config.ts",
+  "19": "AI Coding Assistant Instructions for MASAE Delivery Tracker",
   "20": "tsconfig.json",
   "21": "advanced-full-text-search.md",
   "22": "advanced-jsonb-indexing.md",
@@ -52,7 +52,7 @@
   "50": "security-rls-basics.md",
   "51": "security-rls-performance.md",
   "52": "_template.md",
-  "53": "@testing-library/jest-dom",
+  "53": "dev-local.ps1",
   "54": "check-migrations.sh",
   "55": "gen-types-local.sh"
 }

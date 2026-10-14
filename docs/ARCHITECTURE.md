@@ -96,7 +96,14 @@ validées.
 | **2 — Mine, finance, pilotage** | registre des titres et des obligations avec alertes d'échéance, courriers ; saisie de l'extraction, des pointages d'engins et des analyses ; tiers, contrats, factures, règlements, saisie et validation d'écritures, génération automatique des écritures (factures, achats, paie), rapprochement bancaire, budgets ; programmes, jalons, tâches et risques | conformité et comptabilité tenues dans le SI |
 | **3 — HQSE, RH, consolidation** | HQSE repris de l'existant ; RH et paie sénégalaise ; états financiers SYSCOHADA (bilan, compte de résultat) ; consolidation du groupe ; mode hors-ligne (PWA) pour le site et les chauffeurs | SI complet du groupe |
 
-## 7. Mise en production des migrations
+## 7. Environnement de développement et bascule
+
+**Décision du 14/10/2026** : tout le développement se fait sur une base Supabase
+locale (`npm run local:init`, Docker), chargée avec une copie des données de
+production. La production `Livraison_soma` n'est pas modifiée avant la fin du projet.
+
+À la bascule finale, procédure :
+
 
 1. `npx supabase link --project-ref ndzjirmrfdeheuljjvxb`
 2. `npx supabase migration repair --status applied 20251130000000` pour marquer le schéma existant comme appliqué.

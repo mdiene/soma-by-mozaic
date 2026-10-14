@@ -12,6 +12,7 @@ React 19 + Vite + TypeScript strict + Tailwind 4 + TanStack Query + React Router
 Supabase (Postgres 17, Auth, RLS). Projet de production : `ndzjirmrfdeheuljjvxb` (« Livraison_soma »).
 
 ## Règles impératives
+- **Cible actuelle : la base Supabase LOCALE** (`npm run local:init`, `npm run local:reset`). La production n'est modifiée qu'à la bascule finale, sur décision explicite de l'utilisateur.
 - **Ne jamais modifier la base de production directement.** Toute évolution passe par une migration dans `supabase/migrations/`, validée par `npm run db:check`, puis appliquée par l'utilisateur.
 - Le fichier `20251130000000_baseline_livraison_soma.sql` décrit l'existant : ne pas le modifier, ne pas le rejouer en production.
 - Les tables historiques `public.*` sont encore utilisées par l'ancienne application : migrations **additives** uniquement jusqu'à la bascule (`supabase/pending/`).

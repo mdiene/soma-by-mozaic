@@ -34,3 +34,6 @@ supabase/.branches
 
 # Graphify : cache local (le graphe lui-même est versionné)
 graphify-out/cache
+
+# Copie locale des données de production (données personnelles : jamais dans git)
+supabase/seed/10_*.sql

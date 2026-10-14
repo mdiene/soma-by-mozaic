@@ -13,7 +13,11 @@
     "test:watch": "vitest",
     "db:check": "bash scripts/check-migrations.sh",
     "db:types": "supabase gen types typescript --project-id ndzjirmrfdeheuljjvxb --schema public,core,livraisons,production,mine,finance,pilotage > src/lib/database.types.ts",
-    "graph": "graphify update ."
+    "graph": "graphify update .",
+    "local:init": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev-local.ps1",
+    "local:reset": "supabase db reset --local",
+    "local:stop": "supabase stop",
+    "local:types": "supabase gen types typescript --local --schema public,core,livraisons,production,mine,finance,pilotage > src/lib/database.types.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",
